@@ -1,11 +1,12 @@
-import interface
 import pandas as pd
+
+from interface import Interface
 
 
 # 参赛队伍算法（请封装成类）
 class SchedulingAlgorithm:
     def __init__(self):
-        ...
+        self.cpp_interface = Interface()
 
     def generate_schedule(self, platform) -> pd.DataFrame:
         """
@@ -94,4 +95,4 @@ class SchedulingAlgorithm:
         #             - start_time: 计划开始时间
         # """
 
-        return interface.Interface().generate_schedule(platform)
+        return self.cpp_interface.generate_schedule(platform)
