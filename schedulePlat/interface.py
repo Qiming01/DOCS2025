@@ -3,7 +3,7 @@ import pandas as pd
 
 
 class Interface:
-    def __init__(self, algorithm_type="random"):
+    def __init__(self, algorithm_type="spt"):
         self.debug = False
         self.cpp_platform = dfjsp.Platform()
         self.scheduler = dfjsp.Scheduler()
